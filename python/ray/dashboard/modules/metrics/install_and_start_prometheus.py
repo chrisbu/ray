@@ -26,6 +26,9 @@ def get_system_info():
     if architecture == "x86_64":
         # In the Prometheus filename, it's called amd64
         architecture = "amd64"
+    elif architecture == "aarch64":
+        # Support raspberry pi fop experimentation, armv7 in Prometheus filename
+        architecture = "arm64"
     return os_type, architecture
 
 
